@@ -4,6 +4,31 @@
 
 <html>
     <head>
+        <script>
+            function validateForm()
+            {
+                var username, password;
+
+                username = document.querySelector("input[name=username]");
+                password = document.querySelector("input[name=password]");
+
+                console.log(username.value, password.value);
+
+                if(username.value === "")
+                {
+                    alert("User Name should not be blank.");
+                    username.focus();
+                    return false;
+                }
+                if(password.value === "")
+                {
+                    alert("Password should not be blank");
+                    password.focus();
+                    return false;
+                }
+                return true;
+            }
+        </script>
 <%--        <link rel="stylesheet"  type="text/css" href="../css/styles.css"/>--%>
         <style>
             body {
@@ -35,7 +60,6 @@
                 border-radius: 1.5em;
                 box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
             }
-
             #username, #password {
                 width: 76%;
                 color: rgb(38, 50, 56);
@@ -53,8 +77,7 @@
                 margin-bottom: 27px;
                 font-family: 'Ubuntu', sans-serif;
             }
-
-            #signup {
+            #signupInLoginPage {
                 width: 76%;
                 color: rgb(38, 50, 56);
                 font-weight: 700;
@@ -94,7 +117,7 @@
     <body>
     <div class="login">
         <h2 align="center">Login Form</h2>
-        <html:form action="/submitLogin">
+        <html:form action="/submitLogin"> <%--onsubmit="validateForm()"--%>
 <%--            <div style="color:red">--%>
 <%--                <html:errors/>--%>
 <%--            </div>--%>
@@ -124,7 +147,7 @@
         </div>
         </html:form>
 
-        <div id="signup">
+        <div id="signupInLoginPage">
             Don't have account?<br>
             <html:link action="/signup">Click here to Signup
             </html:link>

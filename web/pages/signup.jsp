@@ -8,6 +8,7 @@
 
 <html>
     <head>
+<%--        <link rel="stylesheet"  type="text/css" href="../css/styles.css"/>--%>
         <script>
             function validateForm()
             {
@@ -104,24 +105,6 @@
                 border-radius: 20px;
                 outline: none;
                 box-sizing: border-box;
-                margin-left: 46px;
-                text-align: center;
-                margin-bottom: 27px;
-                font-family: 'Ubuntu', sans-serif;
-            }
-
-            #exter {
-                width: 76%;
-                color: rgb(38, 50, 56);
-                font-weight: 700;
-                font-size: 14px;
-                letter-spacing: 1px;
-                background: rgba(136, 126, 126, 0.04);
-                padding: 10px 20px;
-                border-radius: 20px;
-                outline: none;
-                box-sizing: border-box;
-                border: 2px solid rgba(0, 0, 0, 0.02);
                 margin-left: 46px;
                 text-align: center;
                 margin-bottom: 27px;
